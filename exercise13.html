@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise 13</title>
+    <style type="text/css">
+body{
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #414142;
+  font-family: Arial;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+}
+.content {
+  max-width: 600px;
+  margin: 1em auto;
+}
+p {
+  margin: 1em 0;
+}
+a:visited, a:link {
+  color: #D64078;
+  text-decoration: none;
+}
+.elem p {
+  padding: 0 1em;
+}
+.elem {
+  border: solid #6AC5AC 3px;
+  position: relative;
+}
+.elem-green {
+  border: solid #FDC72F 3px;
+  margin: 10px;
+}
+.box {
+  float: left;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+}
+.after-box{
+  clear: left;
+}
+.box2 {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+}
+    </style>
+  </head>
+  <body>
+    <h1 class="content">inline-block</h1>
+      <p class="content">Vous pouvez créer une grille de boites qui s'adaptent à
+        la largeur du navigateur et s'agencent plutôt bien.
+        C'est possible depuis longtemps en utilisant <code>float</code>,
+        mais maintenant avec <code>inline-block</code> c'est encore plus facile.
+        Regardons des exemples pour chaque approche.</p>
+    <h2 class="content">La manière difficile (avec float)</h2>
+      <div class="box elem"><p>Je flotte !</p></div>
+      <div class="box elem"><p>Je flotte !</p></div>
+      <div class="box elem"><p>Je flotte !</p></div>
+      <div class="box elem"><p>Je flotte !</p></div>
+      <div class="box elem"><p>Je flotte !</p></div>
+      <div class="box elem"><p>Je flotte !</p></div>
+      <div class="box elem"><p>Je flotte !</p></div>
+      <div class="box elem"><p>Je flotte !</p></div>
+      <div class="box elem"><p>Je flotte !</p></div>
+      <div class="box elem"><p>Je flotte !</p></div>
+      <div class="box elem"><p>Je flotte !</p></div>
+      <section class="elem elem-green after-box">
+        <p>J'utilise clear pour ne pas flotter à coté des boites au dessus.</p>
+      </section>
+    <h2 class="content">La manière facile (avec inline-block)</h2>
+      <p class="content">Vous pouvez avoir le même effet en utilisant
+        la valeur <code>inline-block</code> de la propriété <code>display</code>.</p>
+      <div class="box2 elem"><p>Je suis inline-block !</p></div>
+      <div class="box2 elem"><p>Je suis inline-block !</p></div>
+      <div class="box2 elem"><p>Je suis inline-block !</p></div>
+      <div class="box2 elem"><p>Je suis inline-block !</p></div>
+      <div class="box2 elem"><p>Je suis inline-block !</p></div>
+      <div class="box2 elem"><p>Je suis inline-block !</p></div>
+      <div class="box2 elem"><p>Je suis inline-block !</p></div>
+      <div class="box2 elem"><p>Je suis inline-block !</p></div>
+      <div class="box2 elem"><p>Je suis inline-block !</p></div>
+      <div class="box2 elem"><p>Je suis inline-block !</p></div>
+      <section class="elem elem-green">
+        <p>J'utilise clear pour ne pas flotter à coté des boites au dessus.</p>
+      </section>
+      <p class="content">Vous avez un peu plus de travail à faire pour <a href="https://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/">que IE6
+        et IE7 supportent</a> <code>inline-block</code>. Parfois les gens disent que <code>inline-block</code>
+        déclenche quelque chose appellé <code>hasLayout</code>, mais vous n'avez besoin de savoir
+        ça que pour les vieux navigateurs. Suivez le lien précédant à propos d'IE6 et IE7
+        si vous êtes curieux d'en apprendre plus. Sinon, continuons.</p>
+  </body>
+</html>

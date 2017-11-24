@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise 11</title>
+    <style type="text/css">
+body{
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #414142;
+  font-family: Arial;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+}
+.content {
+  max-width: 600px;
+  margin: 1em auto;
+}
+p {
+  margin: 1em 0;
+}
+.elem p {
+  padding: 0 1em;
+}
+.elem {
+  border: solid #6AC5AC 3px;
+  position: relative;
+}
+.elem-red {
+  border: solid #D64078 3px;
+}
+.elem-green {
+  border: solid #FDC72F;
+}
+.ipsum {
+  color: #734161;
+  background-color: #eee;
+}
+article img {
+  float: right;
+  width: 50%;
+}
+nav {
+  float: left;
+  width: 200px;
+}
+section {
+  margin-left: 206px;
+}
+a:visited, a:link {
+  color: #D64078;
+  text-decoration: none;
+}
+    </style>
+  </head>
+  <body>
+    <h1 class="content">largeur en pourcent</h1>
+    <p class="content">Le pourcent est une unité de mesure relative au block conteneur.
+      C'est génial pour les images : ici nous avons une image qui a toujours 50% de la
+      largeur de son conteneur. Essayez de réduire la taille de la page pour voir.</p>
+    <article class="elem elem-green content clearfix">
+      <img src="http://fr.learnlayout.com/images/ilta.png" alt="floof"/>
+      <p>Vous pouvez même utiliser <code>min-width</code> et <code>max-width</code> pour limiter la
+        largeur maximale ou minimale de l'image.</p>
+    </article>
+    <h2 class="content">mise en page avec une largeur en pourcent</h2>
+    <p class="content">Vous pouvez utiliser le pourcent pour votre mise en page,
+      mais cela peut demander un peu de travail. Dans cet exemple,
+      le contenu de la <code>nav</code> s'agence de manière désagréable quand la fenêtre est trop étroite.
+      Cela se réduit à ce qui marche le mieux pour votre contenu.</p>
+    <div class="clearfix elem">
+      <nav class="elem elem-red">
+        <ul>
+          <li><a href="http://fr.learnlayout.com/float-layout.html">Accueil</a></li>
+          <li><a href="http://fr.learnlayout.com/float-layout.html">Menu Taco</a></li>
+          <li><a href="http://fr.learnlayout.com/float-layout.html">Projet de liste</a></li>
+          <li><a href="http://fr.learnlayout.com/float-layout.html">Horaires</a></li>
+          <li><a href="http://fr.learnlayout.com/float-layout.html">Directions</a></li>
+          <li><a href="http://fr.learnlayout.com/float-layout.html">Contact</a></li>
+        </ul></nav>
+      <section class="elem elem-green">
+        <p>Quand cette mise en page est trop étroite, la <code>nav</code> est écrasée.
+          Pire, vous ne pouvez pas utiliser <code>min-width</code> sur la nav pour empêcher cela,
+          parce que la colonne de droite ne le respecterait pas.</p>
+      </section>
+      <section class="elem elem-green ipsum">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+          vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+          ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+          augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+          lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit
+          risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
+          In at libero sed nunc venenatis imperdiet sed ornare turpis.
+          Donec vitae dui eget tellus gravida venenatis.
+          Integer fringilla congue eros non fermentum.
+          Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+          Mauris quis diam velit.</p>
+      </section>
+    </div>
+  </body>
+</html>

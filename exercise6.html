@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise 6</title>
+    <style type="text/css">
+body{
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #414142;
+  font-family: Arial;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+}
+.content {
+  max-width: 600px;
+  margin: 1em auto;
+}
+.elem {
+  border: solid #6AC5AC 3px;
+  position: relative;
+}
+.elem p {
+  padding: 0 1em;
+}
+p {
+  margin: 1em 0;
+}
+nav.elem {
+  position: absolute;
+  left: 0px;
+  width: 200px;
+}
+.elem-red {
+  border: solid #D64078 3px;
+}
+.elem-green {
+  border: solid #FDC72F 3px;
+  background-color: white;
+}
+a:link, a:visited {
+  color: #D64078;
+  text-decoration: none;
+}
+.ipsum {
+  color: #734161;
+  background-color: #eee;
+}
+.elem-orange {
+  border: solid #96C02E 3px;
+}
+section {
+  margin-left: 200px;
+}
+footer.elem {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 90px;
+  background-color: white;
+  width: 100%;
+  margin: 0;
+  z-index: 1;
+}
+    </style>
+  </head>
+  <body>
+    <h1 class="content">exemple de position</h1>
+      <p class="content">Ces trucs à propos de position vont peut-être avoir plus de sens dans un exemple
+        pratique. Ci-dessous se trouve une mise en page réaliste.</p>
+      <div class="container elem">
+        <nav class="elem elem-red">
+          <ul>
+            <li><a href="http://fr.learnlayout.com/position-example.html">Accueil</a></li>
+            <li><a href="http://fr.learnlayout.com/position-example.html">Menu Taco</a></li>
+            <li><a href="http://fr.learnlayout.com/position-example.html">Projet de liste</a></li>
+            <li><a href="http://fr.learnlayout.com/position-example.html">Horaires</a></li>
+            <li><a href="http://fr.learnlayout.com/position-example.html">Directions</a></li>
+            <li><a href="http://fr.learnlayout.com/position-example.html">Contact</a></li>
+          </ul>
+        </nav>
+        <section class="elem elem-green">
+        <p>La propriété <code>margin-left</code> pour les sections assure
+          qu'il y a de la place pour la <code>nav</code>.</p></section>
+        <section class="elem elem-green ipsum">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+          vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+          ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+          augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+          lobortis in odio. Praesent convallis urna a lacus interdum ut
+          hendrerit risus congue. Nunc sagittis dictum nisi,
+          sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis
+          imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis.
+          Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh
+          tempor porta. Cras ac leo purus. Mauris quis diam velit.</p></section>
+        <section class="elem elem-green">
+        <p>Remarquez ce qu'il se passe lorsque vous redimensionnez votre navigateur.
+          Ça marche plutôt bien !</p></section>
+        <footer class="elem elem-orange">
+        <p>Si vous utilisez un header et un footer positionné en fixed,
+          faites en sorte qu'il y ait de la place pour eux !
+          J'ajoute un <code>margin-bottom</code> sur le <code>body</code>.</p></footer>
+      </div>
+      <p class="content">Cet exemple marche parce que l'élément conteneur est plus grand
+        que la nav. Ci ce n'était pas le cas, la nav déborderait de son conteneur.
+        Dans les pages suivantes nous discuterons d'autres techniques de mise en page
+        qui ont différents avantages et inconvénients.</p>
+  </body>
+</html>

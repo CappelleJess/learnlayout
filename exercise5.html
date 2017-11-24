@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise 5</title>
+    <style type="text/css">
+body{
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #414142;
+  font-family: Arial;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+}
+.elem {
+  border: solid #6AC5AC 3px;
+  position: relative;
+  width: 800px;
+  margin: 20px;
+}
+.elem p{
+  padding: 0 1em;
+  text-align: justify;
+}
+.content{
+  margin: 1em auto;
+  max-width: 600px;
+}
+.relativ2{
+  top: -40px;
+  left: 20px;
+  width: 500px;
+  background: white;
+}
+.elem-red {
+  border: solid #D64078 3px;
+}
+.relative{
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+.absolute{
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 300px;
+  height: 200px;
+}
+    </style>
+  </head>
+  <body>
+    <h1 class="content">position</h1>
+    <p class="content">Pour des mise en page plus complexes, nous devons parler de la propriété CSS</br>
+      <code>position</code>. Elle a plusieurs valeurs possibles, et leurs noms n'ont aucun sens et sont</br>
+      impossible à retenir. Voyons-les une par une, mais peut-être devriez-vous ajouter</br>
+      cette page à vos favoris.</p>
+    <h2 class="content">static</h2>
+      <div class="elem">
+        <p><code>static</code> est la valeur par défaut de tous les éléments. Un élément avec <code>position: static;</code> n'est positionné</br>
+          d'aucune manière spéciale. Un élément static est dit <em>non positionné</em> et un élément avec une propriété</br>
+          position ayant une valeur autre que static est dit <em>positionné</em>.</p>
+      </div>
+    <h2 class="content">relative</h2>
+      <div class="relativ1 elem">
+        <p><code>relative</code> se comporte de la même façon que <code>static</code> sauf si vous ajoutez quelques propriétés en plus.</p>
+      </div>
+      <div class="relativ2 elem elem-red">
+        <p>Ajouter les propriétés <code>top</code>, <code>right</code>, <code>bottom</code> et <code>left</code> à un élément</br>
+          positionné en relative va le placer ailleurs que sa position</br>
+          normale. Le reste du contenu ne sera pas ajusté pour prendre la</br>
+          place dans l'espace laissé par l'élément.</p>
+      </div>
+      <h2 class="content">fixed</h2>
+      <p class="content">Un élément positionné en fixed est positionné par rapport a la fenêtre du navigateur,
+        ce qui signifie qu'il reste toujours à la même place même si la page défile. De la
+        même manière qu'avec un élément positionné en relative, nous pouvons utiliser les
+        propriétés <code>top</code>, <code>right</code>, <code>bottom</code> et <code>left</code>.</p>
+      <p class="content">Je suis sûr que vous avez remarqué cet élément fixe dans le coin en bas à droite de
+          la page. Je vous autorise à le regarder maitenant. Voici le CSS qui l'a placé là.</p>
+      <p class="content">Un élément positionné en fixed ne laisse aucun espace dans la page là où il aurait
+        normalement dû se trouver.</p>
+      <p class="content">Les navigateurs mobiles ont, étonnement, un support très approximatif de la valeur
+        fixed. <a href="http://bradfrost.com/blog/mobile/fixed-position/">Apprenez en plus ici</a>.</p>
+      <h2 class="content">absolute</h2>
+      <p class="content"><code>absolute</code> est la valeur la plus délicate. <code>absolute</code> se comporte comme <code>fixed</code> sauf que
+        son positionnement est relatif à <em>l'élément parent positionné le plus proche</em> au lieu
+        d'être relatif à la fenêtre du navigateur. Si un élément positionné en absolute n'à
+        aucun élément parent positionné, il utilise le corps du document et se déplace avec
+        le document au défilement de la page. N'oubliez-pas qu'un élément "positionné" est
+        un élément dont la position est tout sauf <code>static</code>.</p>
+      <p class="content">Voici un exemple simple :</p>
+      <div class="relative elem">
+        <p>Cet élément est positionné en relative. S'il était positionné en <code>position:</br>
+          static;</code> son élément enfant positionné en absolute s'échapperait et serait
+          positionné de manière relative au corps du document.</p>
+      <div class="absolute elem elem-red">
+        <p>Cet élément est positionné en
+          absolute. Sa position est relative à
+          son parent.</p>
+      </div>
+    </div>
+    <p class="content">C'est difficile, mais c'est essentiel pour créer d'excellentes mise en page. Dans la
+      page suivante nous utiliserons la propriété <code>position</code> de manière plus pratique.
+  </body>
+</html>

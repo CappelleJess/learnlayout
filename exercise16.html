@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise 16</title>
+    <style type="text/css">
+body{
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #414142;
+  font-family: Arial;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+}
+.content {
+  max-width: 600px;
+  margin: 1em auto;
+}
+p {
+  margin: 1em 0;
+}
+.elem {
+  border: solid #6AC5AC 3px;
+  position: relative;
+}
+.elem p {
+  padding: 0 1em;
+}
+.elem-red {
+  border: solid #D64078 3px;
+}
+.elem-green {
+  border: solid #FDC72F 3px;
+}
+.ipsum {
+  color: #734161;
+  background-color: #eee;
+}
+.flex-column {
+  flex: 1;
+}
+nav {
+  width: 200px;
+}
+a:visited, a:link {
+  color: #D64078;
+  text-decoration: none;
+}
+.container {
+  display:  flex;
+}
+.initial {
+  flex: initial;
+  width: 200px;
+  min-width: 100px;
+}
+.none {
+  flex: none;
+  width: 200px;
+}
+.flex{
+  flex: 1;
+}
+.flex2 {
+  flex: 2;
+}
+.vertical-container {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  box-sizing: border-box;
+}
+</style>
+  </head>
+  <body>
+    <h1 class="content">flexbox</h1>
+      <p class="content">Le nouveau mode de mise en page <code>flexbox</code> se veut redéfinir
+        comment nous faisons les mise en page en CSS.
+        Malheureusement la spécification a beaucoup changé récemment,
+        donc c'est implémenté différement sur les différents navigateurs.
+        Cependant, j'aimerais partager quelques exemples pour que vous sachiez ce qui arrive.
+        Ces exemples ne marchent pour l'instant qu'avec l'implementation flexbox de Chrome,
+        basé sur la <a href="https://www.w3.org/TR/css-flexbox-1/">dernière version du standard</a>.</p>
+      <p class="content">Il y a beaucoup de ressources dépassées sur flexbox.
+        Si vous voulez en apprendre plus sur flexbox,
+        <a href="https://css-tricks.com/old-flexbox-and-new-flexbox/">commencez ici</a> par apprendre comment identifier si une ressource est actuelle ou pas.
+        J'ai écrit un <a href="https://bocoup.com/blog/dive-into-flexbox">article détaillé utilisant la dernière syntaxe</a>.</p>
+      <p class="content">Flexbox vous permet de faire beaucoup plus; les exemples qui suivent ne sont là que pour vous donner une idée :</p>
+      <div class="container elem">
+        <nav class="elem elem-red">
+          <ul>
+            <li><a href="http://fr.learnlayout.com/percent.html">Accueil</a></li>
+            <li><a href="http://fr.learnlayout.com/percent.html">Menu Taco</a></li>
+            <li><a href="http://fr.learnlayout.com/percent.html">Projet de liste</a></li>
+            <li><a href="http://fr.learnlayout.com/percent.html">Horaires</a></li>
+            <li><a href="http://fr.learnlayout.com/percent.html">Directions</a></li>
+            <li><a href="http://fr.learnlayout.com/percent.html">Contact</a></li>
+          </ul></nav>
+        <div class="elem elem-red flex-column">
+          <section class="elem elem-green"><p>Flexbox c'est trop facile !</p></section>
+          <section class="elem elem-green ipsum"><p>Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
+            nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
+            Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
+            Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula,
+            facilisis sed ornare eu, lobortis in odio.
+            Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+            Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
+            In at libero sed nunc venenatis imperdiet sed ornare turpis.
+            Donec vitae dui eget tellus gravida venenatis.
+            Integer fringilla congue eros non fermentum.
+            Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+            Mauris quis diam velit.</p></section>
+        </div>
+      </div>
+      <h2 class="content">Mise en page plus fantaisiste avec flexbox</h2>
+        <div class="container elem">
+          <section class="elem elem-green initial"><p>J'ai une largeur de 200px
+            quand il y a la place et je serai réduite à 100px s'il n'y en a pas,
+            mais pas moins.</p></section>
+          <section class="elem elem-green none"><p>J'aurai toujours une largeur de 200px,
+            peu importe ce qu'il se passe.</p></section>
+          <section class="elem elem-green flex1"><p>Je prendrai 1/3 de la place restante.</p></section>
+          <section class="elem elem-green flex2"><p>Je prendrai 2/3 de la place restante.</p></section>
+        </div>
+      <h2 class="content">Alignement avec flexbox</h2>
+        <div class="vertical-container elem">
+          <section class="elem elem-green"><p>Pour finir, c'est facile d'aligner quelque chose verticalement en CSS !</p></section>
+        </div>
+  </body>
+</html>

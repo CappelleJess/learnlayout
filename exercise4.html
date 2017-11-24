@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise 4</title>
+    <style type="text/css">
+body{
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #414142;
+  font-family: Arial;
+}
+.simple {
+  width: 500px;
+  margin: 20px auto;
+  border-width: 10px;
+  box-sizing: border-box;
+}
+.fancy {
+  width: 500px;
+  margin: 20px auto;
+  padding: 50px;
+  border-width: 10px;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+}
+.elem {
+  border: solid #6AC5AC 3px;
+  position: relative;
+}
+.elem p{
+  padding: 0 1em;
+  text-align: justify;
+}
+.content{
+  margin: 1em auto;
+  max-width: 600px;
+}
+    </style>
+  </head>
+  <body>
+    <h1 class="content">box sizing</h1>
+      <p class="content">
+      Au fil du temps, les gens se sont rendus compte que les maths ce n'était pas</br>
+      marrant, donc une nouvelle propriété CSS appelée <code>box-sizing</code> fût créée. Quand</br>
+      vous ajoutez la propriété <code>box-sizing: border-box;</code> à un élément, le padding et la</br>
+      bordure de cet élément n'augmentent plus sa largeur. Ci-dessous, le même exemple</br>
+      que dans la page précédente, mais avec la propriété <code>box-sizing: border-box;</code> sur</br>
+      les deux éléments :</p>
+      <div class="simple elem">
+        <p>Nous avons la même taille maintenant !</p>
+      </div>
+      <div class="fancy elem">
+        <p>Hourra !</p>
+      </div>
+      <p class="content">
+      C'est tellement mieux que certains auteurs veulent que tous les éléments de toutes</br>
+      leurs pages fonctionnent de la même manière. Ils ajoutent donc ce bout de CSS à</br>
+      leurs pages :</p>
+      <p class="content">
+      Cela force tous les éléments à être toujours dimensionnés de cette façon plus</br>
+      intuitive.</p>
+      <p class="content">
+      Puisque <code>box-sizing</code> est plutôt récent, vous devriez utiliser les préfixes <code>-webkit-</code> et</br>
+      <code>-moz-</code> pour l'instant, comme je l'ai fait dans mes exemples. Cette technique autorise</br>
+      des fonctionnalités expérimentales dans des navigateurs spécifiques. N'oubliez pas</br>
+      que cette propriété est compatible à partir d'<a href="https://caniuse.com/#search=box-sizing">IE8+</a>.</p>
+      </div>
+  </body>
+</html>

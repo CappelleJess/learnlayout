@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise 3</title>
+    <style type="text/css">
+body{
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #414142;
+  font-family: Arial;
+}
+.simple {
+  width: 500px;
+  margin: 20px auto;
+  border-width: 10px;
+  box-sizing: content-box;
+}
+.fancy {
+  width: 500px;
+  margin: 20px auto;
+  padding: 50px;
+  border-width: 10px;
+  box-sizing: content-box;
+}
+h1 {
+  text-align: center;
+}
+.elem {
+  border: solid #6AC5AC 3px;
+  position: relative;
+}
+.elem p{
+  padding: 0 1em;
+}
+.content{
+  margin: 1em auto;
+  max-width: 600px;
+}
+    </style>
+  </head>
+      <body>
+          <h1 class="content">box-model</h1>
+          <p class="content">
+            Si nous parlons de la propriété width, nous devrions parler du <em>box model</em>. Quand</br>
+            vous ajustez la propriété width d'un élément, celui-ci peut paraître plus gros que ce</br>
+            que vous avez indiqué : la bordure et le padding de l'élément l'étirent au delà de la</br>
+            largeur spécifiée. Regardez l'exemple suivant, où deux éléments ayant la même </br>
+            largeur se retrouvent avec deux tailles différentes.</p>
+            <div class="simple elem">
+                <p>Je suis plus petit...</p>
+            </div>
+            <div class="fancy elem">
+                <p>Et je suis plus grand !</p>
+            </div>
+          <p class="content">
+            Pendant des générations, les maths étaient la solution à ce problème. Les auteurs</br>
+            des CSS attribuaient à la propriété width des valeurs inférieures à ce qu'ils</br>
+            souhaitaient, soustrayant le padding et la bordure. Heureusement, vous n'êtes plus</br>
+            obligés de faire ça...</p>
+
+      </body>
+</html>

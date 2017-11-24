@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise 9</title>
+    <style type="text/css">
+body{
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #414142;
+  font-family: Arial;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+}
+.content {
+  max-width: 600px;
+  margin: 1em auto;
+}
+p {
+  margin: 1em 0;
+}
+.elem {
+  border: solid #6AC5AC 3px;
+}
+.elem p {
+  padding: 0 1em;
+}
+.content img{
+  float: right;
+}
+.img {
+  max-width: 100%
+}
+.clear {
+  clear: both;
+}
+.clearfix{
+  overflow: auto;
+}
+    </style>
+  </head>
+
+  <body>
+    <h1 class="content">le hack clearfix</h1>
+    <p class="content">Voici un truc bizarre, gênant qui arrive parfois en utilisant les floats:</p>
+    <div class="content">
+      <div class="elem">
+        <img src="http://fr.learnlayout.com/images/ilta.png" alt="floof"/>
+      <p>Oh oh... cette image est plus grande que l'élément qui la contient,
+        et elle est flottante, donc elle déborde de son conteneur !</p>
+    </div>
+  </div>
+      <p class="content clear">Il existe une manière de régler ce problème, mais c'est moche.
+          Ça s'appelle <em>clearfix hack</em></p>
+      <p class="content">Essayons d'ajouter cette nouvelle CSS :</p>
+      <p class="content">Maintenant voyons ce qu'il se passe :</p>
+    <div class="content">
+      <div class="elem clearfix">
+        <img src="http://fr.learnlayout.com/images/ilta.png" alt="floof"/>
+        <p>Beaucoup mieux !</p>
+      </div>
+      <p class="content">Ça marche pour les navigateurs récents.
+        Si vous voulez supporter IE6 vous devez ajouter ce qui suit :</p>
+      <p class="content">Il existe des navigateurs plus exotiques qui demanderont peut-être plus d'attention.
+        <a href="https://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use">Le monde du clearfix est plutôt effrayant</a>, mais cette solution simple marchera
+        pour la grande majorité des navigateurs.</p>
+  </body>
+</html>
